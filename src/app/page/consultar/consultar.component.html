@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Identificacion</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Pulsacion</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let persona of personas">
+        <tr>
+            <td>{{persona.id}}</td>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.sexo}}</td>
+            <td>{{persona.edad}}</td>
+            <td>{{persona.pulsacion}}</td>
+          </tr>
+    </tbody>
+  </table>
