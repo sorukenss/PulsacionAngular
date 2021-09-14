@@ -6,6 +6,8 @@
         <th scope="col">Sexo</th>
         <th scope="col">Edad</th>
         <th scope="col">Pulsacion</th>
+        <th scope="col">Modificar</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody *ngFor="let persona of personas">
@@ -15,6 +17,9 @@
             <td>{{persona.sexo}}</td>
             <td>{{persona.edad}}</td>
             <td>{{persona.pulsacion}}</td>
+            <td><button type="button" routerLink="/modificar/{{persona.id}}" class="btn btn-primary">MODIFICAR</button></td>
+            <td><button type="button" (click)="eliminar(persona.id)" class="btn btn-primary">Eliminar</button></td>
+
           </tr>
     </tbody>
   </table>

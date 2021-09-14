@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Persona } from 'src/app/models/persona';
 import { PersonaServiceService } from 'src/app/services/persona-service.service';
 
@@ -9,11 +10,16 @@ import { PersonaServiceService } from 'src/app/services/persona-service.service'
 })
 export class ModificarComponent implements OnInit {
   persona:Persona=new Persona();
-  constructor(private personaService:PersonaServiceService) { }
+  constructor(private personaService:PersonaServiceService,private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.persona=new Persona();
+    const id=this.activeRoute.snapshot.params.numero;
+   this.mapear(id);
+    console.log(id);
+
   }
+
 
   mapear(id:string){
    let personas=this.personaService.consultar();

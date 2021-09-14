@@ -15,5 +15,8 @@ export class ConsultarComponent implements OnInit {
     this.personas=this.personaService.consultar();
   }
 
-
+eliminar(id:string){
+  this.personaService.eliminar(id);
+  this.personas=this.personaService.consultar();
+}
 }

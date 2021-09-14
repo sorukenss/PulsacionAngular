@@ -23,6 +23,12 @@ export class PersonaServiceService {
    return persona;
   }
 
+  eliminar(id:string){
+    let personas=this.consultar();
+    let personaindex=personas.findIndex(p=> p.id==id);
+    personas.splice(personaindex,1);
+    localStorage.setItem('personas', JSON.stringify(personas));
+  }
 
 
 }

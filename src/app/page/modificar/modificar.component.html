@@ -1,33 +1,36 @@
 <div class="container">
     <h1>Modificar Pulsacion</h1>
-<form class="g-3">
-    <div class="col-auto">
-        <div class="col-md-4">
-            <div class="col-md-5" >
-                <label for="inputEmail4" class="form-label">Identificacion</label>
-                <input [(ngModel)]="persona.id" type="text" class="form-control" id="identificacion" name="identificacion">
-              </div>
-              
-        </div>
-    </div>
-    <div class="btn" >
-        <button type="button" (click)="mapear(persona.id)" class="btn btn-primary">Consultar</button>
-      </div>
-   
-  <div class="col-md-4">
-    <div class="col-md-5">
-        <label for="inputPassword4" class="form-label">Nombre</label>
-        <input [(ngModel)]="persona.nombre" type="text" class="form-control" id="nombre" name="nombre">
-      </div>
-  </div>
+<form class="g-3" autocomplete="off">
+  <div class="col-auto">
     <div class="col-md-4">
-        <div class="col-md-4">
-            <label for="inputCity" class="form-label">Edad</label>
-            <input  [(ngModel)]="persona.edad" type="number" class="form-control" id="edad" name="edad">
+        <div class="col-md-5" >
+            <label for="inputEmail4"  class="form-label">Identificacion</label>
+            <input [(ngModel)]="persona.id" type="text" disabled class="form-control" id="identificacion" name="identificacion">
           </div>
+          
     </div>
+</div>
+<!--<div class="btn" >
+    <button type="button" (click)="mapear(persona.id)" class="btn btn-primary">Consultar</button>
+  </div>-->
+
+<div class="col-md-4">
+<div class="col-md-5">
+    <label for="inputPassword4" class="form-label">Nombre</label>
+    <input [(ngModel)]="persona.nombre" type="text" class="form-control" id="nombre" name="nombre">
+  </div>
+</div>
+<div class="col-md-4">
+    <div class="col-md-4">
+        <label for="inputCity" class="form-label">Edad</label>
+        <input  [(ngModel)]="persona.edad" type="number" class="form-control" id="edad" name="edad">
+      </div>
+</div>  
+
+</form>
+  
     
-  </form>
+  
   <div class="col-md-2">
       <select [(ngModel)]="persona.sexo" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="sexo" name="sexo">
     <option selected>SEXO</option>
